@@ -17,8 +17,16 @@
 
         public static int Division(int n1, int n2)
         {
-            int result = n1 / n2;
-            return result;
+            int result = 0;
+            try
+            {
+                result = n1 / n2; 
+            }
+            catch (DivideByZeroException e)
+            {
+                Console.WriteLine("Exception caught: {0}", e.Message);
+            }
+                return result;
         }
         public static int Multiplication(int n1, int n2)
         {
